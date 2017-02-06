@@ -17,13 +17,6 @@ cleanup() {
 trap error ERR
 trap cleanup EXIT
 
-if [ -z "$GO_PIPELINE_COUNTER" ]; then
-    export GO_PIPELINE_COUNTER=0
-fi
-
-if [ -z "$GO_STAGE_COUNTER" ]; then
-    export GO_STAGE_COUNTER=0
-fi
 
 CURRENT_DIR=`pwd`
 
@@ -40,6 +33,3 @@ docker run --rm \
            --workdir /build \
            -e MONO_THREADS_PER_CPU=200 \
            mono:4.6.1 bash ./compile.sh
-
-
-
