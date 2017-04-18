@@ -1,3 +1,3 @@
 #!/bin/bash
 
-gcc -o cardtest main.c
+gcc -o cardtest CardReader/CardReader/main.c
