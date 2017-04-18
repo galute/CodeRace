@@ -155,7 +155,7 @@ int main(int argc, const char * argv[]) {
     int result;
     card_t * start_p = NULL;
     card_t **temp_pp = &start_p;
-    file_p = open("/Users/jmillen/Code/CodeRace/temp.txt", O_RDONLY);
+    file_p = open("./temp.txt", O_RDONLY);
     
     if (file_p == -1)
     {
