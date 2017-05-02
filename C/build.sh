@@ -17,14 +17,6 @@ cleanup() {
 trap error ERR
 trap cleanup EXIT
 
-if [ -z "$GO_PIPELINE_COUNTER" ]; then
-    export GO_PIPELINE_COUNTER=0
-fi
-
-if [ -z "$GO_STAGE_COUNTER" ]; then
-    export GO_STAGE_COUNTER=0
-fi
-
 CURRENT_DIR=`pwd`
 
 echo
